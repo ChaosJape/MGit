@@ -28,9 +28,6 @@ android {
         dataBinding true
     }
 
-    lintOptions {
-        abortOnError false
-    }
 
     signingConfigs {
         if (project.hasProperty('special')) {
@@ -54,6 +51,10 @@ android {
         release {
             signingConfig signingConfigs.release
         }
+    }
+    namespace 'me.sheimi.sgit'
+    lint {
+        abortOnError false
     }
 }
 
